@@ -10,7 +10,9 @@
     <packaging>pom</packaging>
     <name>${project.artifactId}</name>
 
-    <properties/>
+    <properties>
+        <maven.test.skip>true</maven.test.skip>
+    </properties>
 
     <modules>
         <module>dubbo-test-api</module>
