@@ -7,21 +7,6 @@
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>./xiaohujr-biz-pay-svc.log</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./xiaohujr-biz-pay-svc.log.%d{yyyy-MM-dd}</fileNamePattern>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%level] %logger{36}\(%M:%L\) - %msg%n</pattern>
-            <charset>UTF-8</charset>
-        </encoder>
-    </appender>
-
-    <logger name="com.xiaohujr" level="DEBUG" additivity="false">
-        <appender-ref ref="FILE" />
-    </logger>
-
     <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </root>
