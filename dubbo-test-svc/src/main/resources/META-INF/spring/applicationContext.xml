@@ -18,7 +18,7 @@
     <!-- dubbo-common -->
     <dubbo:application name = "${dubbo.application.name}" owner = "${dubbo.application.owner}"/>
     <dubbo:protocol name = "${dubbo.protocol.name}"/>
-    <dubbo:registry address = "${dubbo.registry.address}" file="${dubbo.registry.file}"/>
+    <dubbo:registry address = "${dubbo.registry.address}" check="false"/>
 
     <dubbo:service interface="dubbo.test.api.TestService" class="dubbo.test.service.impl.TestServiceImpl" timeout="1000" retries="0"/>
 </beans>
