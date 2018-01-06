@@ -20,5 +20,5 @@
     <dubbo:protocol name = "${dubbo.protocol.name}"/>
     <dubbo:registry address = "${dubbo.registry.address}" check="false"/>
 
-    <dubbo:service interface="dubbo.test.api.TestService" class="dubbo.test.service.impl.TestServiceImpl" timeout="1000" retries="0"/>
+    <!--<dubbo:service interface="dubbo.test.api.TestService" class="dubbo.test.service.impl.TestServiceImpl" timeout="1000" retries="0"/>-->
 </beans>

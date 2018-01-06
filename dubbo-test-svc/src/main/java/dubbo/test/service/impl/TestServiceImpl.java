@@ -14,15 +14,15 @@ import org.springframework.stereotype.Service;
  * @version $Id$
  * @since 2017.11.29
  */
-@Service
+//@Service(value = "myTestServiceImpl")
 public class TestServiceImpl implements TestService {
 
     private static final Logger LOGGER =
         LoggerFactory.getLogger(TestServiceImpl.class);
 
-
+    @Override
     public OutputVO testMethod(InputVO inputVO) {
-        LOGGER.info("inputVO is {}", inputVO.getUid());
+        LOGGER.info("this is a service impl.");
         final OutputVO outputVO = new OutputVO();
         outputVO.setUid(inputVO.getUid());
         outputVO.setOrderId(inputVO.getOrderId());
