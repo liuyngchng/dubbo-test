@@ -21,6 +21,14 @@ public class SpringContainerTest {
         ClassPathXmlApplicationContext applicationContext =
             new ClassPathXmlApplicationContext("classpath:applicationContext-test.xml");
         applicationContext.start();
+        applicationContext.getBeanFactory().registerSingleton(
+            "newBean1",
+            dubbo.test.service.impl.NewServiceImpl.class
+        );
+        applicationContext.getBeanFactory().registerSingleton(
+            "newBean2",
+            dubbo.test.service.impl.NewServiceImpl.class
+        );
         LOGGER.info("spring container started.");
     }
 }
