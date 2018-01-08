@@ -15,6 +15,8 @@
     <context:property-placeholder location = "classpath*:*-test.properties"/>
     <context:component-scan base-package = "dubbo.test.service" />
     <bean id="myAAATestService" name="myAAATestService" class="dubbo.test.service.impl.DubboContainerTest"/>
+
+    <bean id="testBean" class="dubbo.test.service.impl.ITestServiceImpl.Test"/>
     <!-- dubbo-common -->
     <!--<dubbo:application name = "${dubbo.application.name}" owner = "${dubbo.application.owner}"/>-->
     <!--<dubbo:protocol name = "${dubbo.protocol.name}"/>-->

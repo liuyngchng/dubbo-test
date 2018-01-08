@@ -18,7 +18,16 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 
-        beanFactory.registerSingleton("myPostBean", dubbo.test.service.impl.NewServiceImpl.class);
+        try {
+            beanFactory.registerSingleton(
+                "myPostBean",
+                dubbo.test.service.impl.NewServiceImpl.class.newInstance()
+            );
+        } catch (InstantiationException e) {
+            LOGGER.error("error", e);
+        } catch (IllegalAccessException e) {
+            LOGGER.error("error", e);
+        }
         LOGGER.info("class is {}", beanFactory.getClass().getName());
 
 

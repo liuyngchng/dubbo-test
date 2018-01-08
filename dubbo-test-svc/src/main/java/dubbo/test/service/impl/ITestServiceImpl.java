@@ -28,4 +28,25 @@ public class ITestServiceImpl implements TestService {
         outputVO.setOrderId("testOrderId");
         return outputVO;
     }
+
+    public static class Test {
+        private String name;
+        private String value;
+
+        public String getName() {
+            return "this is a test name.";
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
+        }
+    }
 }
