@@ -18,13 +18,13 @@ import java.util.UUID;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:/applicationContext-test.xml"})
-public class TestServiceImplTest {
+public class TestServiceImplITest {
 
     /**
      * Logger.
      */
     private static final Logger LOGGER =
-        LoggerFactory.getLogger(TestServiceImplTest.class);
+        LoggerFactory.getLogger(TestServiceImplITest.class);
 
     @Autowired
     private TestService testService;

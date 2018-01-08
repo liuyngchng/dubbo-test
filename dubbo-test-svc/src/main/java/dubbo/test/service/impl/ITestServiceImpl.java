@@ -15,10 +15,10 @@ import org.springframework.stereotype.Service;
  * @since 2017.11.29
  */
 @Service
-public class TestServiceImpl implements TestService {
+public class ITestServiceImpl implements TestService {
 
     private static final Logger LOGGER =
-        LoggerFactory.getLogger(TestServiceImpl.class);
+        LoggerFactory.getLogger(ITestServiceImpl.class);
 
     @Override
     public OutputVO testMethod(InputVO inputVO) {
