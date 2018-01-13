@@ -5,7 +5,6 @@ import dubbo.test.model.OutputVO;
 import dubbo.test.model.InputVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
 
 
 /**
@@ -14,11 +13,11 @@ import org.springframework.stereotype.Service;
  * @version $Id$
  * @since 2017.11.29
  */
-@Service
-public class ITestServiceImpl implements TestService {
+//@Service
+public class TestServiceImpl implements TestService {
 
     private static final Logger LOGGER =
-        LoggerFactory.getLogger(ITestServiceImpl.class);
+        LoggerFactory.getLogger(TestServiceImpl.class);
 
     @Override
     public OutputVO testMethod(InputVO inputVO) {
@@ -27,26 +26,5 @@ public class ITestServiceImpl implements TestService {
         outputVO.setUid("testUid");
         outputVO.setOrderId("testOrderId");
         return outputVO;
-    }
-
-    public static class Test {
-        private String name;
-        private String value;
-
-        public String getName() {
-            return "this is a test name.";
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
     }
 }

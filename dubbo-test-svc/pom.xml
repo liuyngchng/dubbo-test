@@ -65,6 +65,17 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.souyidai</groupId>
+            <artifactId>soeasy-thrift-client-factory-ext</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.souyidai</groupId>
+            <artifactId>souyidai-esb-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
 
         <!--junit-->
