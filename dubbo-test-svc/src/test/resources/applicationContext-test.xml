@@ -15,7 +15,7 @@
     <context:property-placeholder location = "classpath*:*-test.properties"/>
     <context:component-scan base-package = "dubbo.test.service" />
     <!--<bean id="myAAATestService" name="myAAATestService" class="dubbo.test.service.impl.DubboContainerTest"/>-->
-    <bean id="subTestBean" class="dubbo.test.service.impl.TestServiceImpl.Test"/>
+    <bean id="subTestBean" class="dubbo.test.service.impl.SubTestServiceImpl"/>
     <bean id="testBean" class="dubbo.test.service.impl.TestServiceImpl"/>
     <!--<bean class="com.souyidai.thrift.ext.spring.ThriftClientBeanFactoryPostProcessor"/>-->
     <!-- dubbo-common -->
